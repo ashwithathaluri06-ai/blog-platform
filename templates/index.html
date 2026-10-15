@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Home | BlogSpace{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <p class="eyebrow">YOUR IDEAS. YOUR SPACE.</p>
+    <h1>Stories worth<br>sharing.</h1>
+    <p class="hero-text">Discover ideas, share your experiences, and join the conversation.</p>
+
+    {% if current_user.is_authenticated %}
+        <a class="button" href="{{ url_for('create_post') }}">+ Write a Story</a>
+    {% else %}
+        <a class="button" href="{{ url_for('register') }}">Start Writing</a>
+    {% endif %}
+</section>
+
+<section class="posts-section">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">THE COMMUNITY</p>
+            <h2>Latest Stories</h2>
+        </div>
+        <span class="post-count">{{ posts|length }} posts</span>
+    </div>
+
+    {% if posts %}
+        <div class="post-grid">
+            {% for post in posts %}
+                <article class="post-card">
+                    <p class="post-meta">
+                        By {{ post.author.username }} ·
+                        {{ post.created_at.strftime('%d %b %Y') }}
+                    </p>
+                    <h3>
+                        <a href="{{ url_for('post_detail', post_id=post.id) }}">
+                            {{ post.title }}
+                        </a>
+                    </h3>
+                    <p class="post-excerpt">
+                        {{ post.content[:160] }}{% if post.content|length > 160 %}...{% endif %}
+                    </p>
+                    <div class="card-bottom">
+                        <span>{{ post.comments|length }} comments</span>
+                        <a href="{{ url_for('post_detail', post_id=post.id) }}">Read story →</a>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="empty-state">
+            <h3>No stories yet</h3>
+            <p>Be the first to share something with the community.</p>
+            {% if current_user.is_authenticated %}
+                <a class="button" href="{{ url_for('create_post') }}">Create First Post</a>
+            {% else %}
+                <a class="button" href="{{ url_for('register') }}">Join and Write</a>
+            {% endif %}
+        </div>
+    {% endif %}
+</section>
+{% endblock %}

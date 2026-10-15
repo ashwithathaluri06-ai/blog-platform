@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Write a Story | BlogSpace{% endblock %}
+
+{% block content %}
+<section class="form-wrapper">
+    <div class="form-card post-form-card">
+        <p class="eyebrow">YOUR VOICE MATTERS</p>
+        <h1>Write a new story</h1>
+        <p class="form-description">Share your ideas, experiences, and knowledge.</p>
+
+        <form method="POST" action="{{ url_for('create_post') }}">
+            <label for="title">Post title</label>
+            <input type="text" id="title" name="title"
+                   placeholder="Give your story a title" maxlength="200" required>
+
+            <label for="content">Your story</label>
+            <textarea id="content" name="content" rows="12"
+                      placeholder="Start writing your story here..." required></textarea>
+
+            <button type="submit" class="button full-button">Publish Story</button>
+            <a class="cancel-link" href="{{ url_for('index') }}">Cancel</a>
+        </form>
+    </div>
+</section>
+{% endblock %}

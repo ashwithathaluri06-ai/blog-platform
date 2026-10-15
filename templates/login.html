@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Login | BlogSpace{% endblock %}
+
+{% block content %}
+<section class="form-wrapper">
+    <div class="form-card">
+        <p class="eyebrow">WELCOME BACK</p>
+        <h1>Login to BlogSpace</h1>
+        <p class="form-description">Continue sharing your thoughts and stories.</p>
+
+        <form method="POST" action="{{ url_for('login') }}">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email"
+                   placeholder="you@example.com" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"
+                   placeholder="Enter your password" required>
+
+            <button type="submit" class="button full-button">Login</button>
+        </form>
+
+        <p class="form-footer">
+            Don't have an account?
+            <a href="{{ url_for('register') }}">Register here</a>
+        </p>
+    </div>
+</section>
+{% endblock %}

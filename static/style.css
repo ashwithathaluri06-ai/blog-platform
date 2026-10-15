@@ -1,0 +1,136 @@
+/* BlogSpace - Main Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --background: #faf9f6;
+    --surface: #ffffff;
+    --text: #242820;
+    --muted: #777b72;
+    --primary: #426b50;
+    --primary-dark: #31513c;
+    --border: #e8e7df;
+    --danger: #b33b3b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.navbar nav a {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.navbar nav .nav-button {
+    background: var(--primary);
+    color: white;
+    padding: 9px 18px;
+    border-radius: 6px;
+}
+
+.welcome {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1120px;
+    padding: 0 24px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+.hero {
+    text-align: center;
+    padding: 85px 20px 90px;
+    border-bottom: 1px solid var(--border);
+}
+
+.eyebrow {
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1,
+.article-header h1,
+.form-card h1 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 70px);
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    color: var(--muted);
+    max-width: 500px;
+    margin: 0 auto 28px;
+}
+
+.button {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 22px;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+   
