@@ -238,18 +238,14 @@ MediaPipe Hand Tracking Demo ![Google AI Media Pipe] (https://ai.google.dev/edge
 
 A futuristic interaction system powered by hand tracking and real-time gesture recognition.
 
-Credits
+## Credits
 
-This project is based on the original gesture-control project by shivam-kotwalia.
+- **Original Project:** [shivam-kotwalia/gesture-control](https://github.com/shivam-kotwalia/gesture-control)
+- **Developed & Maintained By:** [Ashwitha Thaluri](https://github.com/ashwithathaluri06-ai)
+- **Technology:** [Python](https://www.python.org/), [OpenCV](https://opencv.org/), [MediaPipe](https://ai.google.dev/edge/mediapipe/), and [PyAutoGUI](https://pyautogui.readthedocs.io/)
 
-GitHub Profile: Ashwitha Thaluri
+This project is developed and maintained for **learning, educational, and portfolio purposes**, with a focus on AI, computer vision, and gesture-based human-computer interaction.
 
-MediaPipe Documentation: Google AI — MediaPipe
+Special thanks to the original project author and the open-source community for their valuable contributions and resources.
 
-This repository is maintained for learning and educational purposes.
-
-Built with Python, AI, and Computer Vision.
-
-
-
-
+**Built with Python, AI, and Computer Vision.**
