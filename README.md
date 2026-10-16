@@ -29,7 +29,11 @@ Exit Presentation
 
 🚀 Features
 
-✅ Control Google Slides using gestures ✅ Real-time hand tracking using AI ✅ Works directly from laptop webcam ✅ No additional hardware required ✅ Beginner-friendly AI + Computer Vision project
+✅ Control Google Slides using gestures
+✅ Real-time hand tracking using AI 
+✅ Works directly from laptop webcam 
+✅ No additional hardware required 
+✅ Beginner-friendly AI + Computer Vision project
 
 
 
