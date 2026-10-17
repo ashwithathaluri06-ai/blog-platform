@@ -1,251 +1,113 @@
-Gesture Control Presenter 🎮🖐️
-
-
-Control your Google Slides presentations using hand gestures through your laptop camera using Computer Vision and AI.
-
-
-
-This project uses:
-
-
-
-OpenCV
-
-MediaPipe
-
-PyAutoGUI
-
-to detect hand gestures and convert them into presentation controls like:
-
-
-
-Next Slide
-
-Previous Slide
-
-Start Presentation
-
-Exit Presentation
-
-🚀 Features
-
-✅ Control Google Slides using gestures
-✅ Real-time hand tracking using AI 
-✅ Works directly from laptop webcam 
-✅ No additional hardware required 
-✅ Beginner-friendly AI + Computer Vision project
-
-
-
-🧠 Gesture Controls
-
-Gesture	Action
-
-✋ Open Palm	Next Slide
-
-🤟 Three Fingers	Previous Slide
-
-✌️ Two Fingers	Start Slideshow
-
-✊ Fist	Exit Slideshow
-
-🛠️ Technologies Used
-
-Python
-
-OpenCV
-
-MediaPipe
-
-PyAutoGUI
-
-📦 Installation
-
-Step 1 — Clone Project
-
-git clone https://github.com/shivam-kotwalia/gesture-control
-
-cd gesture-control
-
-Step 2 — Install Dependencies
-
-pip3 install -r requirements.txt
-
-Step 3 — Download Hand Landmarker Model
-
-python3 setup_models.py
-
-▶️ Run the App
-
-python3 main.py
-
-💻 macOS Permission Setup
-
-For keyboard control to work on macOS:
-
-
-
-Go to:
-
-
-
-System Settings → Privacy & Security
-
-
-
-Enable permissions for:
-
-
-
-Accessibility
-
-Input Monitoring
-
-Allow access for:
-
-
-
-Terminal OR
-
-VS Code OR
-
-PyCharm
-
-Without these permissions, the app cannot control Google Slides.
-
-
-
-🎯 How to Use
-
-Open Google Slides in Chrome
-
-Start slideshow mode
-
-Run the Python application
-
-Show gestures in front of webcam
-
-Control slides hands-free
-
-📂 Project Structure
-
-gesture-control/
-
-│
-
-├── .gitignore
-
-├── main.py
-
-├── README.md
-
+# 📝 Blog Platform
+
+A simple and user-friendly blogging web application built using **Python, Flask, and SQLite**. Users can create accounts, log in securely, publish blog posts, edit or delete their own posts, and interact through comments.
+
+## 🚀 Features
+
+- **User Authentication** — User registration and login.
+- **Create Blog Posts** — Write and publish blog articles.
+- **Edit Posts** — Update previously published content.
+- **Delete Posts** — Remove your own blog posts.
+- **Comments** — Interact with blog posts through comments.
+- **Database Integration** — Store users, posts, and comments using SQLite.
+- **Session Management** — Manage authenticated users using Flask-Login.
+
+## 🛠️ Tech Stack
+
+- **Programming Language:** Python
+- **Backend Framework:** Flask
+- **Database:** SQLite
+- **ORM:** Flask-SQLAlchemy
+- **Authentication:** Flask-Login
+- **Frontend:** HTML, CSS, Bootstrap (if implemented)
+
+## 📂 Project Structure
+
+```text
+blog-platform/
+├── app.py
+├── templates/
+├── static/
+├── instance/
 ├── requirements.txt
+└── README.md
+```
 
-├── setup_models.py
+*Note: The structure above is illustrative. Adjust it to match your actual project files.*
 
-└── models/
+## ⚙️ Installation and Setup
 
-    └── hand_landmarker.task
-📜 r
-equirements.txt
+### 1. Clone the repository
 
-mediapipe==0.10.35
+```bash
+git clone https://github.com/ashwithathaluri06-ai/blog-platform.git
+```
 
-opencv-python>=4.8.0
+### 2. Navigate to the project folder
 
+```bash
+cd blog-platform
+```
 
-pyautogui>=0.9.54
+### 3. Create a virtual environment
 
-🧩 How It Works
+```bash
+python -m venv venv
+```
 
-The application:
+### 4. Activate the virtual environment
 
+**Windows:**
 
+```bash
+venv\Scripts\activate
+```
 
-Captures webcam feed using OpenCV
+### 5. Install dependencies
 
-Detects hand landmarks using MediaPipe
+```bash
+pip install -r requirements.txt
+```
 
-Identifies finger positions
+### 6. Run the application
 
-Maps gestures to keyboard shortcuts
+```bash
+python app.py
+```
 
-Uses PyAutoGUI to control Google Slides
+Open your browser and visit:
 
-🔮 Future Improvements
+```text
+http://127.0.0.1:5000
+```
 
-Swipe gesture recognition
+*Make sure your Flask application initializes the database and uses port 5000 before running these commands.*
 
-Gesture-based laser pointer
+## 🔐 Security Notes
 
-Volume control
+- Do not upload passwords, secret keys, or other sensitive information.
+- Use secure password hashing for user authentication.
+- Configure a strong secret key through environment variables before deployment.
 
-Zoom gestures
+## 🎯 Learning Outcomes
 
-AI-powered custom gesture training
+This project demonstrates practical experience with:
 
-Multi-hand support
+- Python web development using Flask.
+- CRUD operations (Create, Read, Update, Delete).
+- Relational database integration.
+- User authentication and session management.
+- Building and organizing a full-stack web application.
 
-🎓 Learning Outcomes
+## 👩‍💻 Author
 
-This project helps students understand:
+**Ashwitha Thaluri**
 
+- GitHub: [@ashwithathaluri06-ai](https://github.com/ashwithathaluri06-ai)
+- LinkedIn: [Ashwitha Thaluri](https://www.linkedin.com/in/ashwitha-thaluri-55b33039a/)
 
+---
 
-Computer Vision
+⭐ If you find this project useful, consider giving the repository a star!
 
-AI-based gesture recognition
-
-Human Computer Interaction (HCI)
-
-Real-time webcam processing
-
-Automation using Python
-
-📸 Demo Idea
-
-Use this project during:
-
-
-
-AI Workshops
-
-Hackathons
-
-College Tech Fests
-
-Computer Vision Sessions
-
-Smart Classroom Demonstrations
-
-⚠️ Notes
-
-Ensure good lighting conditions
-
-Keep hand visible to webcam
-
-Avoid cluttered backgrounds for better detection
-
-Works best at moderate camera distance
-
-Live MediaPipe
-
-MediaPipe Hand Tracking Demo ![Google AI Media Pipe] (https://ai.google.dev/edge/mediapipe/solutions/guide)
-
-
-
-👨‍💻 Built With AI + Computer Vision
-
-A futuristic interaction system powered by hand tracking and real-time gesture recognition.
-
-## Credits
-
-- **Original Project:** [shivam-kotwalia/gesture-control](https://github.com/shivam-kotwalia/gesture-control)
-- **Developed & Maintained By:** [Ashwitha Thaluri](https://github.com/ashwithathaluri06-ai)
-- **Technology:** [Python](https://www.python.org/), [OpenCV](https://opencv.org/), [MediaPipe](https://ai.google.dev/edge/mediapipe/), and [PyAutoGUI](https://pyautogui.readthedocs.io/)
-
-This project is developed and maintained for **learning, educational, and portfolio purposes**, with a focus on AI, computer vision, and gesture-based human-computer interaction.
-
-Special thanks to the original project author and the open-source community for their valuable contributions and resources.
-
-**Built with Python, AI, and Computer Vision.**
+*Built with Python and Flask as a web development learning project.*
